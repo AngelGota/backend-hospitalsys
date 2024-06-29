@@ -1,9 +1,6 @@
 package pro.angelogomez.hospital.restapi.infrastructure.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.PrePersist;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Random;
@@ -16,7 +13,11 @@ public class MedicoEntity {
     private String id;
     private String nombre;
     private String apellido;
-    private String especialidad;
+    private String fechaNacimiento;
+
+    @ManyToOne
+    @JoinColumn(name = "id_especialidad")
+    private EspecialidadEntity especialidad;
     private String telefono;
     private String email;
 

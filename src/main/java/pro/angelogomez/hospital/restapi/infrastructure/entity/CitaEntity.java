@@ -22,6 +22,10 @@ public class CitaEntity {
     private PacienteEntity paciente;
 
     @ManyToOne
+    @JoinColumn(name = "id_especialidad")
+    private EspecialidadEntity especialidad;
+
+    @ManyToOne
     @JoinColumn(name = "id_medico")
     private MedicoEntity medico;
 

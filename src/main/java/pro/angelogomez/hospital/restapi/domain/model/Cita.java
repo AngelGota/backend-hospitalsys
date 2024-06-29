@@ -13,5 +13,6 @@ public class Cita {
     private LocalDateTime hora;
     private Paciente paciente;
     private Medico medico;
+    private Especialidad especialidad;
     private CitaEstado estado;
 }
