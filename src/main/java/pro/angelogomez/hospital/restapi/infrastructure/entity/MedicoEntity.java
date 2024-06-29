@@ -11,7 +11,7 @@ import java.util.Random;
 @Entity
 @Data
 @Table(name = "medicos")
-public class Medico {
+public class MedicoEntity {
     @Id
     private String id;
     private String nombre;

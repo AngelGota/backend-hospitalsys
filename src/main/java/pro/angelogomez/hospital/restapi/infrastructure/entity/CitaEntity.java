@@ -11,7 +11,7 @@ import java.util.Random;
 @Entity
 @Data
 @Table(name = "citas")
-public class Cita {
+public class CitaEntity {
     @Id
     private String id;
     private Date fecha;
@@ -19,11 +19,11 @@ public class Cita {
 
     @ManyToOne
     @JoinColumn(name = "id_paciente")
-    private Paciente paciente;
+    private PacienteEntity paciente;
 
     @ManyToOne
     @JoinColumn(name = "id_medico")
-    private Medico medico;
+    private MedicoEntity medico;
 
     private CitaEstado estado;
 

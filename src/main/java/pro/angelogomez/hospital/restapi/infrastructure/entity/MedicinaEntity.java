@@ -10,22 +10,17 @@ import java.util.Random;
 
 @Entity
 @Data
-@Table(name = "pacientes")
-public class Paciente {
+@Table(name = "medicinas")
+public class MedicinaEntity {
     @Id
     private String id;
     private String nombre;
-    private String apellido;
-    private String fechaNacimiento;
-    private String genero;
-    private String direccion;
-    private String telefono;
-    private String email;
+    private String descripcion;
 
     @PrePersist
     public void generarId() {
         Random random = new Random();
         int numeroAleatorio = 100 + random.nextInt(900000);
-        this.id = "PAC" + numeroAleatorio;
+        this.id = "MED" + numeroAleatorio;
     }
 }

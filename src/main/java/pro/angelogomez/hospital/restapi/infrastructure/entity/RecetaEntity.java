@@ -8,15 +8,15 @@ import java.util.Random;
 @Data
 @Entity
 @Table(name = "recetas")
-public class Receta {
+public class RecetaEntity {
     @Id
     private String id;
     @ManyToOne
     @JoinColumn(name = "id_cita")
-    private Cita cita;
+    private CitaEntity cita;
     @ManyToOne
     @JoinColumn(name = "id_medicina")
-    private Medicina medicina;
+    private MedicinaEntity medicina;
     private String dosis;
     private String instrucciones;
 
