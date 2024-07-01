@@ -14,7 +14,7 @@ public class CitaService {
     }
 
     public Cita findById(String id) {
-        return iCitaRepository.findById(Integer.valueOf(id));
+        return iCitaRepository.findById(id);
     }
 
     public Iterable<Cita> findAll() {
@@ -22,6 +22,6 @@ public class CitaService {
     }
 
     public void deleteById(String id) {
-        iCitaRepository.deleteById(Integer.valueOf(id));
+        iCitaRepository.deleteById(id);
     }
 }

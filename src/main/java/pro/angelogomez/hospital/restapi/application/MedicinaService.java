@@ -18,10 +18,10 @@ public class MedicinaService {
     }
 
     public Medicina findById(String id) {
-        return iMedicinaRepository.findById(Integer.valueOf(id));
+        return iMedicinaRepository.findById(id);
     }
 
     public void deleteById(String id) {
-        iMedicinaRepository.deleteById(Integer.valueOf(id));
+        iMedicinaRepository.deleteById(id);
     }
 }

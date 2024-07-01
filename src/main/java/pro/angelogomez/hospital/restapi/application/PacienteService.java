@@ -16,7 +16,7 @@ public class PacienteService {
     }
 
     public Paciente findById(String id) {
-        return iPacienteRepository.findById(Integer.valueOf(id));
+        return iPacienteRepository.findById(id);
     }
 
     public Iterable<Paciente> findAll() {
@@ -24,6 +24,8 @@ public class PacienteService {
     }
 
     public void deleteById(String id) {
-        iPacienteRepository.deleteById(Integer.valueOf(id));
+        iPacienteRepository.deleteById(id);
     }
+
+
 }

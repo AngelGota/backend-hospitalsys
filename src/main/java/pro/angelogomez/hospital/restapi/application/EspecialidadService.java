@@ -18,10 +18,10 @@ public class EspecialidadService {
     }
 
     public Especialidad findById(String id) {
-        return iEspecialidadRepository.findById(Integer.valueOf(id));
+        return iEspecialidadRepository.findById(id);
     }
 
     public void deleteById(String id) {
-        iEspecialidadRepository.deleteById(Integer.valueOf(id));
+        iEspecialidadRepository.deleteById(id);
     }
 }

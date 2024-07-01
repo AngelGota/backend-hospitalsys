@@ -14,7 +14,7 @@ public class MedicoService {
     }
 
     public Medico findById(String id) {
-        return iMedicoRepository.findById(Integer.valueOf(id));
+        return iMedicoRepository.findById(id);
     }
 
     public Iterable<Medico> findAll() {
@@ -22,6 +22,6 @@ public class MedicoService {
     }
 
     public void deleteById(String id) {
-        iMedicoRepository.deleteById(Integer.valueOf(id));
+        iMedicoRepository.deleteById(id);
     }
 }
