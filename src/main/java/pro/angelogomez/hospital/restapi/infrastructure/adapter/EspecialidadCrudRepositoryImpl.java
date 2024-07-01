@@ -24,17 +24,17 @@ public class EspecialidadCrudRepositoryImpl implements IEspecialidadRepository {
     }
 
     @Override
-    public Especialidad findById(Integer id) {
-        return especialidadMapper.toEspecialidad(iEspecialidadCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public Especialidad findById(String id) {
+        return especialidadMapper.toEspecialidad(iEspecialidadCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Especialidad: " +id+ " not found")
         ));
     }
 
     @Override
-    public void deleteById(Integer id) {
-        iEspecialidadCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public void deleteById(String id) {
+        iEspecialidadCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Especialidad: " +id+ " not found")
         );
-        iEspecialidadCrudRepository.deleteById(String.valueOf(id));
+        iEspecialidadCrudRepository.deleteById(id);
     }
 }

@@ -23,17 +23,17 @@ public class RecetaCrudRepositoryImpl implements IRecetaRepository {
     }
 
     @Override
-    public Receta findById(Integer id) {
-        return recetaMapper.toReceta(iRecetaCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public Receta findById(String id) {
+        return recetaMapper.toReceta(iRecetaCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Receta: " +id+ " not found")
         ));
     }
 
     @Override
-    public void deleteById(Integer id) {
-        iRecetaCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public void deleteById(String id) {
+        iRecetaCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Receta: " +id+ " not found")
         );
-        iRecetaCrudRepository.deleteById(String.valueOf(id));
+        iRecetaCrudRepository.deleteById(id);
     }
 }

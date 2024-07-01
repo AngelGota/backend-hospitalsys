@@ -24,17 +24,17 @@ public class MedicoCrudRepositoryImpl implements IMedicoRepository {
     }
 
     @Override
-    public Medico findById(Integer id) {
-        return medicoMapper.toMedico(iMedicoCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public Medico findById(String id) {
+        return medicoMapper.toMedico(iMedicoCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Medico: " +id+ " not found")
         ));
     }
 
     @Override
-    public void deleteById(Integer id) {
-        iMedicoCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public void deleteById(String id) {
+        iMedicoCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Medico: " +id+ " not found")
         );
-        iMedicoCrudRepository.deleteById(String.valueOf(id));
+        iMedicoCrudRepository.deleteById(id);
     }
 }

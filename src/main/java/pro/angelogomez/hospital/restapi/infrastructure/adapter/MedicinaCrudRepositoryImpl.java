@@ -24,17 +24,17 @@ public class MedicinaCrudRepositoryImpl implements IMedicinaRepository {
     }
 
     @Override
-    public Medicina findById(Integer id) {
-        return medicinaMapper.toMedicina(iMedicinaCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public Medicina findById(String id) {
+        return medicinaMapper.toMedicina(iMedicinaCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Medicina: " +id+ " not found")
         ));
     }
 
     @Override
-    public void deleteById(Integer id) {
-        iMedicinaCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public void deleteById(String id) {
+        iMedicinaCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Medicina: " +id+ " not found")
         );
-        iMedicinaCrudRepository.deleteById(String.valueOf(id));
+        iMedicinaCrudRepository.deleteById(id);
     }
 }

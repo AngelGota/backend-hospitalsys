@@ -24,17 +24,17 @@ public class CitaCrudRepositoryImpl implements ICitaRepository {
     }
 
     @Override
-    public Cita findById(Integer id) {
-        return citaMapper.toCita(iCitaCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public Cita findById(String id) {
+        return citaMapper.toCita(iCitaCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Cita: " +id+ " not found")
         ));
     }
 
     @Override
-    public void deleteById(Integer id) {
-        iCitaCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public void deleteById(String id) {
+        iCitaCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Cita: " +id+ " not found")
         );
-        iCitaCrudRepository.deleteById(String.valueOf(id));
+        iCitaCrudRepository.deleteById(id);
     }
 }

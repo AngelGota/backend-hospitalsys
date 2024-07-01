@@ -24,18 +24,18 @@ public class PacienteCrudRepositoryImpl implements IPacienteRepository {
     }
 
     @Override
-    public Paciente findById(Integer id) {
-        return pacienteMapper.toPaciente(iPacienteCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public Paciente findById(String id) {
+        return pacienteMapper.toPaciente(iPacienteCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Paciente: " +id+ " not found")
         ));
     }
 
     @Override
-    public void deleteById(Integer id) {
-        iPacienteCrudRepository.findById(String.valueOf(id)).orElseThrow(
+    public void deleteById(String id) {
+        iPacienteCrudRepository.findById(id).orElseThrow(
                 () -> new RuntimeException("ID Paciente: " +id+ " not found")
         );
-        iPacienteCrudRepository.deleteById(String.valueOf(id));
+        iPacienteCrudRepository.deleteById(id);
     }
 
 }
