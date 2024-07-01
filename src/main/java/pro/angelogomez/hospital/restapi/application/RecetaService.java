@@ -14,7 +14,7 @@ public class RecetaService {
     }
 
     public Receta findById(String id) {
-        return iRecetaRepository.findById(Integer.valueOf(id));
+        return iRecetaRepository.findById(id);
     }
 
     public Iterable<Receta> findAll() {
@@ -22,6 +22,6 @@ public class RecetaService {
     }
 
     public void deleteById(String id) {
-        iRecetaRepository.deleteById(Integer.valueOf(id));
+        iRecetaRepository.deleteById(id);
     }
 }
