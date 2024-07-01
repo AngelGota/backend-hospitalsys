@@ -12,7 +12,6 @@ public interface EspecialidadMapper {
     @Mappings(
             {
                     @Mapping(source = "id", target = "id"),
-                    @Mapping(source = "nombre", target = "nombre"),
                     @Mapping(source = "descripcion", target = "descripcion")
             }
     )
