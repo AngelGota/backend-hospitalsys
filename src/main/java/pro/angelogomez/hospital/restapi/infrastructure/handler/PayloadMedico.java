@@ -8,6 +8,5 @@ import pro.angelogomez.hospital.restapi.domain.model.Paciente;
 @AllArgsConstructor
 public class PayloadMedico {
     private String message;
-    private int code;
-    private Paciente paciente;
+    private Object object;
 }
