@@ -1,10 +1,12 @@
 package pro.angelogomez.hospital.restapi.application;
 
 import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import pro.angelogomez.hospital.restapi.domain.model.Paciente;
 import pro.angelogomez.hospital.restapi.domain.port.IPacienteRepository;
 
 @AllArgsConstructor
+@Service
 public class PacienteService {
 
     private final IPacienteRepository iPacienteRepository;
