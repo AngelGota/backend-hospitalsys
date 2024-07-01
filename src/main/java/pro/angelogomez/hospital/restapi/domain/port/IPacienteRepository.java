@@ -5,6 +5,6 @@ import pro.angelogomez.hospital.restapi.domain.model.Paciente;
 public interface IPacienteRepository {
     Paciente save(Paciente paciente);
     Iterable<Paciente> findAll();
-    Paciente findById(Integer id);
-    void deleteById(Integer id);
+    Paciente findById(String id);
+    void deleteById(String id);
 }

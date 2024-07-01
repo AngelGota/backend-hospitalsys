@@ -5,6 +5,6 @@ import pro.angelogomez.hospital.restapi.domain.model.Cita;
 public interface ICitaRepository {
     Cita save(Cita cita);
     Iterable<Cita> findAll();
-    Cita findById(Integer id);
-    void deleteById(Integer id);
+    Cita findById(String id);
+    void deleteById(String id);
 }

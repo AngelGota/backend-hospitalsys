@@ -6,6 +6,6 @@ public interface IEspecialidadRepository {
 
     Especialidad save(Especialidad especialidad);
     Iterable<Especialidad> findAll();
-    Especialidad findById(Integer id);
-    void deleteById(Integer id);
+    Especialidad findById(String id);
+    void deleteById(String id);
 }
